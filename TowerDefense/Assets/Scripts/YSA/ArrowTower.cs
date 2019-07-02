@@ -23,7 +23,7 @@ public class ArrowTower : Tower
     void Start()
     {
 
-        this.attackForce = 10.0f;
+        this.attackForce = 2.0f;
         this.attackRange = 7.0f;
         this.attackSpeed = 2.0f;
     }
