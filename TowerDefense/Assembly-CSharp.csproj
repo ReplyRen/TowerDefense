@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\RPY\GameManager.cs" />
     <Compile Include="Assets\Scripts\RPY\Infantry.cs" />
     <Compile Include="Assets\Scripts\RPY\Pike.cs" />
+    <Compile Include="Assets\Scripts\WHQ\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\YSA\Arrow.cs" />
     <Compile Include="Assets\Scripts\YSA\ArrowTower.cs" />
     <Compile Include="Assets\Scripts\YSA\Enemy.cs" />
