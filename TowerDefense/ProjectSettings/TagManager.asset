@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Army
   - GameManager
+  - Path
   layers:
   - Default
   - TransparentFX
@@ -49,4 +50,7 @@ TagManager:
     locked: 0
   - name: road
     uniqueID: 282240337
+    locked: 0
+  - name: effect
+    uniqueID: 3430306623
     locked: 0

@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\WHQ\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\YSA\Arrow.cs" />
     <Compile Include="Assets\Scripts\YSA\ArrowTower.cs" />
+    <Compile Include="Assets\Scripts\YSA\CreateDoor.cs" />
     <Compile Include="Assets\Scripts\YSA\Crystal.cs" />
     <Compile Include="Assets\Scripts\YSA\Enemy.cs" />
     <Compile Include="Assets\Scripts\YSA\SwordTower.cs" />
