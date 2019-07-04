@@ -8,6 +8,7 @@ TagManager:
   - Army
   - GameManager
   - Path
+  - TowerBase
   layers:
   - Default
   - TransparentFX

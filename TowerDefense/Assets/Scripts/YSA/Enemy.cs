@@ -27,7 +27,6 @@ public class Enemy : MonoBehaviour
         if(Vector3.Distance(pathDots[index].position, transform.position) > 0.1f )
         {
             Vector3 dir = pathDots[index].position - transform.position;
-            Debug.Log(dir);
             dir = dir.normalized;
             Move(dir);
         }

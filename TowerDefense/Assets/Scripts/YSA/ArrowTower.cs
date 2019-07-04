@@ -9,7 +9,6 @@ public class ArrowTower : Tower
     public GameObject arrow;             //箭
     private bool ifAttack = false;       //判断是否攻击
     private float nextFire = 0.0f;
-    public List<GameObject> enemies = new List<GameObject>();
     private static ArrowTower _instance;
     public static ArrowTower instance
     {
@@ -35,14 +34,13 @@ public class ArrowTower : Tower
     private void Update()
     {
         float distance;
-        for (int i = 0; i < enemies.Count; i++)      //每一帧都遍历一遍列表，找到攻击范围内编号最小的敌人
+        for (int i = 0; i <CreateDoor.instance.enemies.Count; i++)      //每一帧都遍历一遍列表，找到攻击范围内编号最小的敌人
         {
-            if (enemies[i] == null)
+            if (CreateDoor.instance.enemies[i] == null)
             {
                 continue;
             }
-            distance = Vector3.Distance(enemies[i].transform.position, transform.position);
-
+            distance = Vector3.Distance(CreateDoor.instance.enemies[i].transform.position, transform.position);
             if (distance < attackRange)             //距离判断
             {
                 index = i;                          //锁定
@@ -50,7 +48,7 @@ public class ArrowTower : Tower
                 break;
             }
         }
-        if (enemies[index] != null)
+        if (CreateDoor.instance.enemies.Count > 0 && CreateDoor.instance.enemies[index] != null)
         {
 
             if (ifAttack && Time.time > nextFire)
@@ -64,7 +62,7 @@ public class ArrowTower : Tower
             }
             if (ifAttack)       //最终判定
             {
-                GameObject go = Instantiate(arrow, transform.position, Quaternion.identity);
+                GameObject go = Instantiate(arrow, transform.position, Quaternion.identity);              
                 go.GetComponent<Arrow>().arrowTower = this;
                 nextFire = Time.time + 1 / attackSpeed; //攻速相关
             }
