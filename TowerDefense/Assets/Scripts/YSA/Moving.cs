@@ -5,20 +5,40 @@ using UnityEngine;
 public class Moving : MonoBehaviour
 {
     public GameObject tower;
+    private bool ifBuild = true;
     private void Update()
     {
-        gameObject.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition + new Vector3(0, 0, 10));
+        gameObject.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition + new Vector3(0, 0, 10));      
         if (Input.GetMouseButton(0))
         {
-            Debug.Log(Input.mousePosition);
+
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Debug.Log(worldPos);
+            
             RaycastHit2D [] hit = Physics2D.RaycastAll(worldPos, new Vector3(0, 0, 1), 20.0f);
-            for(int i = 0; i < hit.Length; i++)
+
+            for (int i = 0; i < hit.Length; i++)
+            {
+                if (hit[i].collider.gameObject.tag == "Tower")
+                {
+                    ifBuild = false;
+                    break;
+                }
+            }
+
+            for (int i = 0; i < hit.Length; i++)
             {
                 if (hit[i].collider.gameObject.tag == "TowerBase")
                 {
-                    Instantiate(tower, hit[i].collider.gameObject.transform.position + new Vector3(0.4f, 0.2f, 0), Quaternion.identity);
+
+                    if(GameManager_YSA.Instance.money >= 25 && ifBuild)
+                    {
+                        Instantiate(tower, hit[i].collider.gameObject.transform.position + new Vector3(0.4f, 0.2f, 0), Quaternion.identity);
+                        GameManager_YSA.Instance.mClass.ChangeMoney(-25);
+                    }
+                    else
+                    {
+                        Debug.Log("金钱不足");
+                    }
                     Destroy(gameObject);
                 }
             }

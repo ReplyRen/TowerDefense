@@ -22,8 +22,8 @@ public class ArrowTower : Tower
     void Start()
     {
 
-        this.attackForce = 2.0f;
-        this.attackRange = 7.0f;
+        this.attackForce = 5.0f;
+        this.attackRange = 3.5f;
         this.attackSpeed = 2.0f;
     }
     private void Awake()

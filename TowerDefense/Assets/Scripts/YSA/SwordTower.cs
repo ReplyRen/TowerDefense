@@ -8,7 +8,7 @@ public class SwordTower : Tower
     private void Start()
     {
         this.attackForce = 10.0f;
-        this.attackRange = 5.0f;
+        this.attackRange = 1.5f;
         this.attackSpeed = 2.0f;
     }
 

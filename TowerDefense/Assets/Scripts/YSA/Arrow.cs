@@ -12,8 +12,6 @@ public class Arrow : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(CreateDoor.instance.enemies.Count);
-        Debug.Log(arrowTower.index);
 
         if (CreateDoor.instance.enemies.Count < arrowTower.index)
         {

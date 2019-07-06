@@ -28,6 +28,12 @@ public class Enemy : MonoBehaviour
         {
             Vector3 dir = pathDots[index].position - transform.position;
             dir = dir.normalized;
+
+            if(dir.x > 0)
+            {
+                transform.eulerAngles = new Vector3(0, 180, 0);
+                dir.x = -dir.x;
+            }
             Move(dir);
         }
         else
@@ -50,6 +56,7 @@ public class Enemy : MonoBehaviour
 
     private void Dead()                //死亡
     {
+        GameManager_YSA.Instance.mClass.ChangeMoney(5);
         Destroy(gameObject);
     }
 }

@@ -69,7 +69,6 @@
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
-    <Compile Include="Assets\MouseEventForSwordTower.cs" />
     <Compile Include="Assets\Scripts\RPY\Archer.cs" />
     <Compile Include="Assets\Scripts\RPY\Army.cs" />
     <Compile Include="Assets\Scripts\RPY\Attribute.cs" />
@@ -83,8 +82,11 @@
     <Compile Include="Assets\Scripts\YSA\CreateDoor.cs" />
     <Compile Include="Assets\Scripts\YSA\Crystal.cs" />
     <Compile Include="Assets\Scripts\YSA\Enemy.cs" />
+    <Compile Include="Assets\Scripts\YSA\GameManager_YSA.cs" />
+    <Compile Include="Assets\Scripts\YSA\Money.cs" />
     <Compile Include="Assets\Scripts\YSA\MouseEvent.cs" />
     <Compile Include="Assets\Scripts\YSA\MouseEventForArrowTower.cs" />
+    <Compile Include="Assets\Scripts\YSA\MouseEventForSwordTower.cs" />
     <Compile Include="Assets\Scripts\YSA\Moving.cs" />
     <Compile Include="Assets\Scripts\YSA\RangeAppear.cs" />
     <Compile Include="Assets\Scripts\YSA\SwordTower.cs" />

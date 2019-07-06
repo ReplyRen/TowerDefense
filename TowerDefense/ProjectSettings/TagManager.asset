@@ -9,6 +9,7 @@ TagManager:
   - GameManager
   - Path
   - TowerBase
+  - Tower
   layers:
   - Default
   - TransparentFX

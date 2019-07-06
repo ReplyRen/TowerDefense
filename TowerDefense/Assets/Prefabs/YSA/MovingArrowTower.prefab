@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 6161221601194258125, guid: 9482016b513e1654a95e863d546f7c15, type: 3}
+  ifBuild: 1
 --- !u!61 &8234080070431378317
 BoxCollider2D:
   m_ObjectHideFlags: 0

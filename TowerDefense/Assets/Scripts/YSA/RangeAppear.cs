@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class RangeAppear : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        float dis = Vector3.Distance(Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3(0, 0, 10.0f), gameObject.transform.position);
+        if (dis < 0.5f)
+        {
+            gameObject.transform.Find("Circle").gameObject.SetActive(true);
+        }
+        else
+        {
+            gameObject.transform.Find("Circle").gameObject.SetActive(false);
+        }
     }
 }
