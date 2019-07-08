@@ -9,7 +9,7 @@ public class HpEnemy : MonoBehaviour
     private void Update()
     {
         float hpTotal;
-        if(gameObject.name == "Enemy2")
+        if(gameObject.name == "Enemy2(Clone)")
         {
             hpTotal = 200;
         }
