@@ -62,6 +62,14 @@ public class ArrowTower : Tower
             }
             if (ifAttack)       //最终判定
             {
+                if((CreateDoor.instance.enemies[index].transform.position.x - transform.position.x) > 0)
+                {
+                    transform.rotation = Quaternion.Euler(0, 180, 0);
+                }
+                else
+                {
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                }
                 GameObject go = Instantiate(arrow, transform.position, Quaternion.identity);              
                 go.GetComponent<Arrow>().arrowTower = this;
                 nextFire = Time.time + 1 / attackSpeed; //攻速相关

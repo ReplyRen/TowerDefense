@@ -32,7 +32,7 @@ public class Moving : MonoBehaviour
 
                     if(GameManager_YSA.Instance.money >= 25 && ifBuild)
                     {
-                        Instantiate(tower, hit[i].collider.gameObject.transform.position + new Vector3(0.4f, 0.2f, 0), Quaternion.identity);
+                        Instantiate(tower, hit[i].collider.gameObject.transform.position , Quaternion.identity);
                         GameManager_YSA.Instance.mClass.ChangeMoney(-25);
                     }
                     else

@@ -20,7 +20,6 @@ public class SwordTower : Tower
             
             if (CreateDoor.instance.enemies[i] == null)
             {
-                //RemoveAt(i);
                 continue;
             }
             float distance = Vector3.Distance(CreateDoor.instance.enemies[i].transform.position, transform.position); // 相聚距离
@@ -35,6 +34,15 @@ public class SwordTower : Tower
 
             if (ifAttack) // 攻速相关
             {
+                if ((CreateDoor.instance.enemies[i].transform.position.x - transform.position.x) > 0)
+                {
+                    transform.rotation = Quaternion.Euler(0, 180, 0);
+                }
+                else
+                {
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                }
+                //gameObject.GetComponent<Animator>().enabled = true;
                 if (CreateDoor.instance.enemies[i].gameObject.GetComponent<Enemy>().hp <= attackForce)
                 {
                     CreateDoor.instance.enemies[i].gameObject.GetComponent<Enemy>().hp -= attackForce;
@@ -44,9 +52,11 @@ public class SwordTower : Tower
                     CreateDoor.instance.enemies[i].gameObject.GetComponent<Enemy>().hp -= attackForce;
                     CreateDoor.instance.nextFireTime[i] = Time.time + 1 / attackSpeed; //攻速相关
                 }
-
-
             }
+            //else
+            //{
+            //    gameObject.GetComponent<Animator>().enabled = false;
+            //}
         }
     }
 }
