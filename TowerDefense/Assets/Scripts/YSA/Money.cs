@@ -23,4 +23,9 @@ public class Money : MonoBehaviour
         
     }
 
+    public void LackMoney(string str)
+    {
+        money.text = str;
+    }
+
 }

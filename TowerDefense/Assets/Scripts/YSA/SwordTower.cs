@@ -5,6 +5,7 @@ using UnityEngine;
 public class SwordTower : Tower
 {
     private bool ifAttack = true;
+    private bool ifHit = false; //是否放动画
     private void Start()
     {
         this.attackForce = 10.0f;
@@ -14,6 +15,7 @@ public class SwordTower : Tower
 
     private void Update()
     {
+        ifHit = false;
 
         for (int i = 0; i < CreateDoor.instance.enemies.Count; i++)
         {
@@ -53,10 +55,18 @@ public class SwordTower : Tower
                     CreateDoor.instance.nextFireTime[i] = Time.time + 1 / attackSpeed; //攻速相关
                 }
             }
-            //else
-            //{
-            //    gameObject.GetComponent<Animator>().enabled = false;
-            //}
+
+            if (distance < attackRange)
+            {
+                ifHit = ifHit|| true;
+                Debug.Log(222);
+            }
+            else
+            {
+                ifHit =ifHit || false;
+            }
+           
         }
+        gameObject.transform.Find("Tower_child").GetComponent<Animator>().enabled = ifHit;
     }
 }

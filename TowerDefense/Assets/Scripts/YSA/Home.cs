@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Crystal : MonoBehaviour
+public class Home : MonoBehaviour
 {
     public float hp = 100.0f;
 
