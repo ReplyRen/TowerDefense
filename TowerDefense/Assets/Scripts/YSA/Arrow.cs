@@ -8,8 +8,12 @@ public class Arrow : MonoBehaviour
     public ArrowTower arrowTower;
 
     public float arrowSpeed = 3.0f;
+    private int index;
 
-
+    private void Start()
+    {
+        index = arrowTower.index;
+    }
     private void Update()
     {
 
@@ -23,7 +27,7 @@ public class Arrow : MonoBehaviour
             return;
         }
   
-        Vector3 direction = CreateDoor.instance.enemies[arrowTower.index].transform.position - transform.position; // 得到方向
+        Vector3 direction = CreateDoor.instance.enemies[index].transform.position - transform.position; // 得到方向
         if (direction.y < 0)
         {
             transform.eulerAngles = new Vector3(0, 180, 180);      //根据相对位置调整旋转方向

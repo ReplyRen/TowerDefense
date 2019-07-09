@@ -125,9 +125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b37973d6bacdd234b8d8b4d828e7fb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackForce: 0
-  attackSpeed: 0
-  attackRange: 0
+  attackForce: 5
+  attackSpeed: 0.7
+  attackRange: 4
   index: 0
   arrow: {fileID: 1041080555944075630, guid: 84adaf98a22e94243a2029795bc76e99, type: 3}
 --- !u!114 &376674437714721778
